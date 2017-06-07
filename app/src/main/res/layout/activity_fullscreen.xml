@@ -22,11 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
-        android:elevation="8dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
 
     <TextView
         android:id="@+id/fullscreen_content"
@@ -39,11 +37,11 @@
         android:keepScreenOn="true"
         android:maxWidth="1822sp"
         android:paddingBottom="0dp"
-        android:paddingLeft="195dp"
-        android:paddingRight="20dp"
+        android:paddingStart="195dp"
+        android:paddingEnd="20dp"
         android:paddingTop="40dp"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="45dp"
+        android:textSize="45sp"
         android:textStyle="bold"
         tools:ignore="MissingPrefix" />
 
@@ -51,27 +49,26 @@
         android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_alignStart="@+id/fullscreen_content"
-        android:layout_alignTop="@+id/fullscreen_content"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/dummy_content"
         android:adjustViewBounds="true"
         android:maxHeight="112dp"
         android:maxWidth="112dp"
-        app:srcCompat="@drawable/noob" />
+        app:srcCompat="@drawable/noob"
+        android:layout_alignBottom="@+id/avi"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp" />
 
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:layout_alignBottom="@+id/fullscreen_content"
         android:layout_alignEnd="@+id/avi"
-        android:layout_alignTop="@+id/load"
-        android:layout_marginEnd="22dp"
+        android:layout_marginEnd="20dp"
         android:adjustViewBounds="true"
-        android:maxHeight="122dp"
+        android:maxHeight="112dp"
         android:maxWidth="112dp"
+        android:visibility="visible"
         app:srcCompat="@drawable/online" />
 
     <ImageView
@@ -88,33 +85,34 @@
         style="@style/AVLoadingIndicatorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="250dp"
         android:visibility="visible"
-        app:indicatorName="PacmanIndicator"></com.wang.avi.AVLoadingIndicatorView>
+        app:indicatorName="PacmanIndicator" />
 
     <com.q42.android.scrollingimageview.ScrollingImageView
         android:id="@+id/scrolling_background"
 
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView8"
-        android:adjustViewBounds="false"
-        android:fitsSystemWindows="false"
+        android:adjustViewBounds="true"
+        android:fitsSystemWindows="true"
+        android:visibility="visible"
         scrolling_image_view:speed="1dp"
-        scrolling_image_view:src="@drawable/scroll" />
+        scrolling_image_view:src="@drawable/scroll"
+        android:layout_alignParentBottom="true" />
 
     <com.wang.avi.AVLoadingIndicatorView
         android:id="@+id/avi2"
         style="@style/AVLoadingIndicatorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
+        android:layout_marginStart="170dp"
         android:layout_marginTop="250dp"
         android:visibility="visible"
-        app:indicatorName="BallPulseIndicator"></com.wang.avi.AVLoadingIndicatorView>
+        app:indicatorName="BallPulseIndicator" />
 
 
     <com.wang.avi.AVLoadingIndicatorView
@@ -122,9 +120,8 @@
         style="@style/AVLoadingIndicatorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
+        android:layout_marginStart="230dp"
         android:layout_marginTop="290dp"
-        android:layout_weight="0.44"
         app:indicatorName="LineScalePulseOutRapidIndicator" />
 
 
