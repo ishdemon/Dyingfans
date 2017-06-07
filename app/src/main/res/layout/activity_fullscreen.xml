@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.harran.ishdemon.dyingfans.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:elevation="8dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        fontPath="fonts/Rogan_Bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/avi"
+        android:background="#80000000"
+        android:keepScreenOn="true"
+        android:maxWidth="1822sp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="195dp"
+        android:paddingRight="20dp"
+        android:paddingTop="40dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        tools:ignore="MissingPrefix" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/fullscreen_content"
+        android:layout_alignTop="@+id/fullscreen_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="10dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="112dp"
+        android:maxWidth="112dp"
+        app:srcCompat="@drawable/noob" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignEnd="@+id/avi"
+        android:layout_alignTop="@+id/load"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="122dp"
+        android:maxWidth="112dp"
+        app:srcCompat="@drawable/online" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fullscreen_content"
+        android:layout_alignParentStart="true"
+        android:paddingTop="0dp"
+        app:srcCompat="@drawable/headerless" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="250dp"
+        android:visibility="visible"
+        app:indicatorName="PacmanIndicator"></com.wang.avi.AVLoadingIndicatorView>
+
+    <com.q42.android.scrollingimageview.ScrollingImageView
+        android:id="@+id/scrolling_background"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView8"
+        android:adjustViewBounds="false"
+        android:fitsSystemWindows="false"
+        scrolling_image_view:speed="1dp"
+        scrolling_image_view:src="@drawable/scroll" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi2"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="250dp"
+        android:visibility="visible"
+        app:indicatorName="BallPulseIndicator"></com.wang.avi.AVLoadingIndicatorView>
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/load"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="290dp"
+        android:layout_weight="0.44"
+        app:indicatorName="LineScalePulseOutRapidIndicator" />
+
+
+</RelativeLayout>

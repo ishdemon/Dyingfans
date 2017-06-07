@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:layout_marginTop="50dp"
+    android:background="#60000000">
+
+    <TextView
+        android:id="@+id/text"
+        fontPath="fonts/Rogan_LightItalic.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageButton2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="74dp"
+        android:layout_marginEnd="21dp"
+        android:text="80% SKILL   20% SARCASM"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/typerTextView"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ish" />
+
+    <com.hanks.htextview.typer.TyperTextView
+        android:id="@+id/typerTextView"
+        fontPath="fonts/Rogan_BoldItalic.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/text"
+        android:layout_marginTop="16dp"
+        android:text="DEVELOPER"
+        android:textColor="?android:attr/colorEdgeEffect"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/text"
+        android:layout_alignTop="@+id/typerTextView"
+        android:layout_marginEnd="22dp"
+        android:maxHeight="20dp"
+        android:maxWidth="20dp"
+        app:srcCompat="@drawable/dev" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/text"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="37dp"
+        android:background="@null"
+        android:onClick="sendToSteam"
+        app:srcCompat="@drawable/steam" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/imageButton2"
+        android:background="@null"
+        android:onClick="sendTomail"
+        app:srcCompat="@drawable/gmail" />
+
+    <com.hanks.htextview.typer.TyperTextView
+        android:id="@+id/textView"
+        fontPath="fonts/Ridley.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageButton2"
+        android:layout_below="@+id/imageButton3"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif"
+        android:text="Bug!"
+        android:textColor="?attr/colorAccent"
+        android:textSize="35dp" />
+
+    <com.hanks.htextview.typer.TyperTextView
+        android:id="@+id/textView2"
+        fontPath="fonts/proxima.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="13dp"
+        android:text="in my code?"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="italic" />
+
+    <com.hanks.htextview.typer.TyperTextView
+        android:id="@+id/textView3"
+        fontPath="fonts/fabric.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="36dp"
+        android:text="Nope! Thats a feature."
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="italic" />
+
+</RelativeLayout>
